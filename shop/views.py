@@ -15,7 +15,6 @@ def list_item(request):
 def detail_item(request, item_id):
 
     item = Item.objects.get(id=item_id)
-    #question = get_object_or_404(Question, id=question_id)
     contex = {
         'item':item,
     }
