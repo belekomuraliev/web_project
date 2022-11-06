@@ -14,20 +14,11 @@
 <form method="POST">
     {% csrf_token %}
     {% for purchase in item.purchase_set.all %}
-        {{ purchase.name }} - {{ purchase.age }} лет, - дата покупки {{ purchase.purchase_date}}<br/>
+       <li> Имя покупателя: {{ purchase.name }} - {{ purchase.age }} лет, - дата покупки {{ purchase.purchase_date}}</li>
     {% endfor %}
 
 
 </form>
-
-
-<!--<ul>-->
-
-<!--    {% for choice in question.choice_set.all %}-->
-<!--        <li> {{choice.choice_text}}</li>-->
-<!--    {% endfor %}-->
-
-<!--</ul>-->
 
 
 </body>
